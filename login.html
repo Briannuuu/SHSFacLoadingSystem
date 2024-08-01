@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style - login.css">
+    <title>Sagad High School Loading System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png">
+</head>
+<body>
+    <div class="container">
+        <div class="half image-half">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="logo" class="logo">
+            </div> 
+        </div>
+
+        <div class="half white-half">
+            <div class="main-text">
+                <h5>WELCOME</h5>
+                <p>Please login your account to continue.</p>
+            </div>
+            <section>
+                <div class="form-box">
+                        <div class="form-value">
+                            <form class action="#" method="post">
+                                    <div class="inputbox">
+                                        <ion-icon name="person-circle-outline"></ion-icon>
+                                        <input type="text" name="username" id="username" placeholder="Username" required>
+                                    </div>
+    
+                                    <div class="inputbox">
+                                        <ion-icon name="lock-closed-outline"></ion-icon>
+                                        <input type="password" name="password" id="password" placeholder="Password">
+                                    </div>
+    
+                                    <div class="forget">
+                                        <label for=""><input type="checkbox">Remember Me</label>
+                                    </div>
+    
+                                    <div class="btn-field">
+                                        <button type="submit" name="login" value="Login" id="submit-btn">Login</button>   
+                                    </div>
+                            </form>    
+                        </div>
+                </div>
+            </section>
+        </div>
+      </div>
+</body>
+<script>
+	const form = document.querySelector('form');
+const usernameInput = document.querySelector('#username');
+const passwordInput = document.querySelector('#password');
+const submitBtn = document.querySelector('#submit-btn');
+
+let attempts = 0;
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  const username = usernameInput.value;
+  const password = passwordInput.value;
+
+  if (username === "user" && password === "1234") {
+    window.location.href = "customer_home.html";
+    alert('Login Successfully! Welcome User!');
+  } else if (username === "admin" && password === "1234") {
+    window.location.href = "admin_home.html";
+    alert('Login Successfully! Welcome Admin!');
+  } else {
+    attempts++;
+    if (attempts === 3) {
+      submitBtn.disabled = true;
+      alert('You have reached the maximum number of attempts.');
+    } else {
+      alert('Incorrect username or password. Please try again.');
+    }
+  }
+});
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

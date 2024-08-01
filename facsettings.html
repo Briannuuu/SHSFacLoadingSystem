@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagad High School Loading System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style - facsettings.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<header class="">
+    <div class="header-logo">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <a href="#" class="logs">Sagad High School</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="log-out-outline"></ion-icon></button>
+        <ul class="dropdown-content">
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </ul>
+      </div>
+</header>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class = "bx bxl-netlify"></i>
+                <span>Welcome</span>
+            </div>
+            <i class = "bx bx-menu" id ="btn"></i>
+        </div>
+        
+
+        <div class="user">
+            <div>
+                <p class = "bold">Hans</p>
+                <p>Admin</p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="admin_home.html"><i class = "bx bxs-dashboard"></i><span class="nav-item">Dashboard</span></a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="facloading.html"><i class='bx bx-loader' ></i></i><span class="nav-item">Faculty Loading</span></a>
+                <span class="tooltip">Faculty Loading</span>
+            </li>
+            <li>
+                <a href="facrec.html"><i class='bx bxs-group' ></i></i><span class="nav-item">Faculty Records</span></a>
+                <span class="tooltip">Faculty Records</span>
+            </li>
+            <li>
+                <a href="subjinfo.html"><i class ="bx bx-book-content"></i><span class="nav-item">Subject Information</span></a>
+                <span class="tooltip">Subject Information</span>
+            </li>
+            <li>
+                <a href="#" class="current-page"><i class='bx bx-slider-alt'></i></i><span class="nav-item">Settings</span></a>
+                <span class="tooltip" id="active">Settings</span>
+            </li>
+        </ul>
+
+        <footer>
+            <p>All rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <br>
+        <div class="card">
+          <div class="col-md-10">
+            <div class="card card-primary" style="width: 100%; margin-left: 120px; margin-top: 25px;">
+              <div class="card-header">
+                <h3 class="card-title">Change Password</h3>
+              </div>
+              <div class="card-body">
+                <!-- Date -->
+
+                <form role="form" id=""  method="post" enctype="multipart/form-data" class="form-horizontal">
+
+                  <div class="card-body">
+                    <div class="form-group  ">
+                      <label for="exampleInputPassword1">Old Password</label>
+                      <input type="password" name="password" class="form-control" id="exampleInputPassword1"  required>
+                    </div>
+                    <div class="form-group  ">
+                      <label for="exampleInputPassword1">New Password</label>
+                      <input type="password" name="password1"  class="form-control" id="exampleInputPassword1" required>
+                    </div>
+                    <div class="form-group ">
+                      <label for="exampleInputPassword1">Confirm password</label>
+                      <input type="password" name="password2" class="form-control" id="exampleInputPassword1"  >
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer text-right">
+                  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+              </form> 
+
+            </div>
+
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function (){
+        sidebar.classList.toggle('active');
+    };
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

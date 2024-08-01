@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagad High School Loading System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style - facrec.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<header class="">
+    <div class="header-logo">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <a href="#" class="logs">Sagad High School</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="log-out-outline"></ion-icon></button>
+        <ul class="dropdown-content">
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </ul>
+      </div>
+</header>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class = "bx bxl-netlify"></i>
+                <span>Welcome</span>
+            </div>
+            <i class = "bx bx-menu" id ="btn"></i>
+        </div>
+        
+
+        <div class="user">
+            <div>
+                <p class = "bold">Hans</p>
+                <p>Admin</p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="admin_home.html"><i class = "bx bxs-dashboard"></i><span class="nav-item">Dashboard</span></a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="facloading.html"><i class='bx bx-loader' ></i></i><span class="nav-item">Faculty Loading</span></a>
+                <span class="tooltip">Faculty Loading</span>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxs-group' class="current-page"></i></i><span class="nav-item">Faculty Records</span></a>
+                <span class="tooltip" id="active">Faculty Records</span>
+            </li>
+            <li>
+                <a href="subjinfo.html"><i class ="bx bx-book-content"></i><span class="nav-item">Subject Information</span></a>
+                <span class="tooltip">Subject Information</span>
+            </li>
+            <li>
+                <a href="facsettings.html"><i class='bx bx-slider-alt'></i></i><span class="nav-item">Settings</span></a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+
+        <footer>
+            <p>All rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="box box-default">
+                <div class="box-header">
+                    <h5 class="box-title">Faculty Records</h5>
+                </div>
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="5%">Employee No.</th>
+                                    <th width="15%">Name</th>
+                                    <th width="15%">Email</th>
+                                    <th width="10%">Contact</th>
+                                    <th width="10%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>21-00648</td>
+                                    <td>Hans Brian De Jesus</td>
+                                    <td>dejesus_hansbrian@plpasig.edu.ph</td>
+                                    <td>09275564359</td>
+                                    <td class="text-center"><a href="#" class="btn btn-view">Edit</a><a href="#" class="btn btn-del">Delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>21-00642</td>
+                                    <td>Matthew Tabrilla</td>
+                                    <td>tabrilla_matthew@plpasig.edu.ph</td>
+                                    <td>09123456789</td>
+                                    <td class="text-center"><a href="#" class="btn btn-view">Edit</a><a href="#" class="btn btn-del">Delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>21-00641</td>
+                                    <td>Anne Rei Junnel Isidro</td>
+                                    <td>isidro_anne_rei_junnel@plpasig.edu.ph</td>
+                                    <td>09123456789</td>
+                                    <td class="text-center"><a href="#" class="btn btn-view">Edit</a><a href="#" class="btn btn-del">Delete</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+    
+    btn.onclick = function (){
+        sidebar.classList.toggle('active');
+    };
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagad High School Loading System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style - facloading.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<header class="">
+    <div class="header-logo">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <a href="#" class="logs">Sagad High School</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="log-out-outline"></ion-icon></button>
+        <ul class="dropdown-content">
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </ul>
+      </div>
+</header>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class = "bx bxl-netlify"></i>
+                <span>Welcome</span>
+            </div>
+            <i class = "bx bx-menu" id ="btn"></i>
+        </div>
+        
+
+        <div class="user">
+            <div>
+                <p class = "bold">Hans</p>
+                <p>Admin</p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="admin_home.html"><i class = "bx bxs-dashboard"></i><span class="nav-item">Dashboard</span></a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="facloading.html"><i class='bx bx-loader' ></i></i><span class="nav-item">Faculty Loading</span></a>
+                <span class="tooltip">Faculty Loading</span>
+            </li>
+            <li>
+                <a href="facrec.html"><i class='bx bxs-group'></i></i><span class="nav-item">Faculty Records</span></a>
+                <span class="tooltip">Faculty Records</span>
+            </li>
+            <li>
+                <a href="#" class="current-page"><i class ="bx bx-book-content"></i><span class="nav-item">Subject Information</span></a>
+                <span class="tooltip" id="active">Subject Information</span>
+            </li>
+            <li>
+                <a href="facsettings.html"><i class='bx bx-slider-alt'></i></i><span class="nav-item">Settings</span></a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+
+        <footer>
+            <p>All rights Reserved.</p>
+        </footer>
+    </div>
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- FORM Panel -->
+                <div class="col-md-4">
+                <form action="" id="manage-subject">
+                    <div class="card">
+                        <div class="card-header">
+                                Subject Form
+                          </div>
+                        <div class="card-body">
+                                <input type="hidden" name="id">
+                                <div class="form-group">
+                                    <label class="control-label">Subject</label>
+                                    <input type="text" class="form-control" name="subject">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Description</label>
+                                    <textarea class="form-control" cols="30" rows="3" name="description"></textarea>
+                                </div>
+                                
+                        </div>
+                                
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Save</button>
+                                    <button class="btn btn-sm btn-default col-sm-3" type="button" onclick="_reset()"> Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <!-- FORM Panel -->
+    
+                <!-- Table Panel -->
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <b>Subject List</b>
+                        </div>
+                        <div class="card-body">
+                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="DataTables_Table_0"></label></div><table class="table table-bordered table-hover dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                <thead>
+                                    <tr role="row"><th class="text-center sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending" style="width: 21.6562px;">#</th><th class="text-center sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Subject: activate to sort column ascending" style="width: 349.406px;">Subject</th><th class="text-center sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 121.594px;">Action</th></tr>
+                                </thead>
+                                <tbody>					
+                                                                <tr role="row" class="odd">
+                                        <td class="text-center sorting_1">1</td>
+                                        <td class="">
+                                            <p>Subject: <b>ESP</b></p>
+                                            <p>Description: <small><b>Edukasyon sa Pagpapakatao</b></small></p>
+                                            
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-primary1 edit_subject" type="button" data-id="1" data-subject="DBMS" data-description="Database Management System">Edit</button>
+                                            <button class="btn btn-sm btn-danger delete_subject" type="button" data-id="1">Delete</button>
+                                        </td>
+                                    </tr><tr role="row" class="even">
+                                        <td class="text-center sorting_1">2</td>
+                                        <td class="">
+                                            <p>Subject: <b>EPP</b></p>
+                                            <p>Description: <small><b>Edukasyong Pantahanan at Pangkabuhayan</b></small></p>
+                                            
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-primary1 edit_subject" type="button" data-id="2" data-subject="Mathematics" data-description="Mathematics">Edit</button>
+                                            <button class="btn btn-sm btn-danger delete_subject" type="button" data-id="2">Delete</button>
+                                        </td>
+                                    </tr><tr role="row" class="odd">
+                                        <td class="text-center sorting_1">3</td>
+                                        <td class="">
+                                            <p>Subject: <b>TLE</b></p>
+                                            <p>Description: <small><b>Technology and Livelihood Education</b></small></p>
+                                            
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-primary1 edit_subject" type="button" data-id="3" data-subject="English" data-description="English">Edit</button>
+                                            <button class="btn btn-sm btn-danger delete_subject" type="button" data-id="3">Delete</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                            </table><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries</div><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><a class="paginate_button previous disabled" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="-1" id="DataTables_Table_0_previous">Previous</a><span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="-1" id="DataTables_Table_0_next">Next</a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Panel -->
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+    
+    btn.onclick = function (){
+        sidebar.classList.toggle('active');
+    };
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

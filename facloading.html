@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagad High School Loading System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style - report.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<header class="">
+    <div class="header-logo">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <a href="#" class="logs">Sagad High School</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="log-out-outline"></ion-icon></button>
+        <ul class="dropdown-content">
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </ul>
+      </div>
+</header>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class = "bx bxl-netlify"></i>
+                <span>Welcome</span>
+            </div>
+            <i class = "bx bx-menu" id ="btn"></i>
+        </div>
+        
+
+        <div class="user">
+            <div>
+                <p class = "bold">Hans</p>
+                <p>Admin</p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="admin_home.html"><i class = "bx bxs-dashboard"></i><span class="nav-item">Dashboard</span></a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#" class="current-page"><i class='bx bx-loader' ></i></i><span class="nav-item">Faculty Loading</span></a>
+                <span class="tooltip" id="active">Faculty Loading</span>
+            </li>
+            <li>
+                <a href="facrec.html"><i class='bx bxs-group' ></i></i><span class="nav-item">Faculty Records</span></a>
+                <span class="tooltip">Faculty Records</span>
+            </li>
+            <li>
+                <a href="subjinfo.html"><i class ="bx bx-book-content"></i><span class="nav-item">Subject Information</span></a>
+                <span class="tooltip">Subject Information</span>
+            </li>
+            <li>
+                <a href="facsettings.html"><i class='bx bx-slider-alt'></i></i><span class="nav-item">Settings</span></a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+
+        <footer>
+            <p>All rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="box box-default">
+                <div class="box-header">
+                    <h5 class="box-title">Faculty Records</h5>
+                </div>
+                <div class="box-body">
+                    <div class="select-menu">
+                        <p>Grade Level</p>
+                        <div class="select-btn">
+                            <span class="sBtn-text">Select your option</span>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">Grade 7</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Grade 8</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Grade 9</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Grade 10</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="select-menu">
+                        <p>Instructor</p>
+                        <div class="select-btn">
+                            <span class="sBtn-text">Select your option</span>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <i class="bx bxl-github" style="color: #171515;"></i>
+                                <span class="option-text">Mr. De Jesus</span>
+                            </li>
+                            <li class="option">
+                                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                                <span class="option-text">Mr. Tabrilla</span>
+                            </li>
+                            <li class="option">
+                                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                                <span class="option-text">Ms. Isidro</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid1">
+            <div class="box box-default">
+                <div class="box-header">
+                    <h5 class="box-title">Subjects to Load</h5>
+                </div>
+                <div class="box-body">
+                    <!-- Text Box -->
+                    <div class="text-box">
+                        <label for="courseInput">Enter Subject:</label>
+                        <input type="text" id="courseInput" name="courseInput" placeholder="Type your subject name">
+                    </div>
+                    
+                    <!-- Data Table -->
+                    <table class="data-table">
+                        <thead>
+                            <tr >
+                                <th>Subject Name</th>
+                                <!-- Add more table headers if needed -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Add table rows with course data dynamically using JavaScript or server-side scripting -->
+                            <tr>
+                                <td>Subject 1</td>
+                                <!-- Add more table cells with course data if needed -->
+                            </tr>
+                            <tr>
+                                <td>Subject 2</td>
+                                <!-- Add more table cells with course data if needed -->
+                            </tr>
+                            <!-- Add more rows as per your data -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid2">
+            <div class="box box-default">
+                <div class="box-header">
+                    <h5 class="box-title">Faculty Loading</h5>
+                </div>
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="10%">Subject Code</th>
+                                    <th width="25%">Subject Description</th>
+                                    <th width="15%">Section</th>
+                                    <th width="20%">Schedule</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ESP</td>
+                                    <td>Edukasyon sa Pagpapakatao</td>
+                                    <td>Mabangis</td>
+                                    <td>302 M 2:00PM-4:00PM</td>
+                                </tr>
+                                <tr>
+                                    <td>EPP</td>
+                                    <td>Edukasyong Pantahanan at Pangkabuhayan</td>
+                                    <td>Malakas</td>
+                                    <td>303 TH 1:00PM-4:00PM</td>
+                                </tr>
+                                <tr>
+                                    <td>TLE</td>
+                                    <td>Technology and Livelihood Education</td>
+                                    <td>Maangas</td>
+                                    <td>304 W 8:00AM-10:00AM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn1 btn-view">Generate Schedule</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/fac.js"></script>
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+    
+    btn.onclick = function (){
+        sidebar.classList.toggle('active');
+    };
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
